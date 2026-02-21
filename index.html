@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satsを使えるサービス</title>
+  <style>
+    :root {
+      --btc: #F7931A;
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e0e0e0;
+      --muted: #888;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: var(--btc);
+      margin-bottom: 0.5rem;
+    }
+    header p { color: var(--muted); }
+    .section { margin-bottom: 2.5rem; }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--btc);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--btc); }
+    .card-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #2a2a2a;
+      color: var(--muted);
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-bottom: 0.4rem;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ Satsを使えるサービス</h1>
+      <p>Bitcoin Lightning Network で支払えるサービス一覧</p>
+    </header>
+
+    <div class="section">
+      <div class="section-title">🛍️ ギフトカード・プリペイド</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">ギフトカード</div>
+          <div class="card-name">Bitrefill</div>
+          <div class="card-desc">Amazon、Netflix、Uber 等を sats で購入。世界最大規模のギフトカードサービス。</div>
+        </div>
+        <div class="card">
+          <div class="tag">プリペイド</div>
+          <div class="card-name">The Bitcoin Company</div>
+          <div class="card-desc">BTC でプリペイド Visa 購入。購入額の最大 50% BTC リワード。</div>
+        </div>
+        <div class="card">
+          <div class="tag">キャッシュバック</div>
+          <div class="card-name">Fold</div>
+          <div class="card-desc">Visa デビットカードで日常決済。BTC キャッシュバック 3〜20%。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🔐 プライバシー・VPN</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">VPN</div>
+          <div class="card-name">Mullvad VPN</div>
+          <div class="card-desc">Lightning で匿名決済できる VPN。ログなし、最高水準のプライバシー。</div>
+        </div>
+        <div class="card">
+          <div class="tag">VPN / eSIM</div>
+          <div class="card-name">LNVPN</div>
+          <div class="card-desc">$0.50 から VPN、$0.99 から eSIM。アカウント不要・KYC なし・即時有効化。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">✈️ 旅行</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">ホテル・フライト</div>
+          <div class="card-name">Travala.com</div>
+          <div class="card-desc">ホテル・フライトを BTC/Lightning で予約。世界最大の仮想通貨旅行サービス。</div>
+        </div>
+        <div class="card">
+          <div class="tag">フライト</div>
+          <div class="card-name">CheapAir</div>
+          <div class="card-desc">フライトを BTC で購入できる米国系旅行サービス。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🎵 音楽・コンテンツ</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">音楽 / Nostr</div>
+          <div class="card-name">Wavlake</div>
+          <div class="card-desc">Lightning 内蔵ウォレットで音楽ストリーミング。ファンからクリエイターへ直接 zap。</div>
+        </div>
+        <div class="card">
+          <div class="tag">Podcast / V4V</div>
+          <div class="card-name">Fountain</div>
+          <div class="card-desc">Podcast の Value4Value。再生しながらクリエイターへ直接 sats を送れる。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📰 SNS・コミュニティ</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">掲示板 / Lightning</div>
+          <div class="card-name">Stacker.news</div>
+          <div class="card-desc">Lightning 払いで投稿・コメント。良記事には数千 sats の zap が集まる。</div>
+        </div>
+        <div class="card">
+          <div class="tag">アプリストア / Nostr</div>
+          <div class="card-name">Zapstore</div>
+          <div class="card-desc">Nostr 鍵でアプリ署名・配布する分散型 Android アプリストア。zap 機能あり。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🤖 AI・API (L402)</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">AI / Lightning</div>
+          <div class="card-name">Routstr</div>
+          <div class="card-desc">Lightning 前払いで AI サービスを利用。アカウント不要のマイクロペイメント API。</div>
+        </div>
+        <div class="card">
+          <div class="tag">API / DLC</div>
+          <div class="card-name">DLC Oracle</div>
+          <div class="card-desc">BTC デリバティブ向けプライスフィード。1000 sats/アクセスの L402 API。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🎁 その他</div>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">プレゼント</div>
+          <div class="card-name">Lightning.Gifts</div>
+          <div class="card-desc">sats を QR コードに包んでプレゼント。受け取りは Lightning ウォレットで。</div>
+        </div>
+        <div class="card">
+          <div class="tag">ウォレット / ノード</div>
+          <div class="card-name">Alby Hub</div>
+          <div class="card-desc">自己ホスト Lightning ノード。Nostr サインイン連携で各種サービスに接続。</div>
+        </div>
+        <div class="card">
+          <div class="tag">P2P / Nostr</div>
+          <div class="card-name">NIP-15 Marketplace</div>
+          <div class="card-desc">Nostr 上の P2P 売買プロトコル。分散型マーケットプレイスの新トレンド。</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>nakamoto × zapos 共同調査 · 2026-02-20 · <a href="https://github.com/ai894/nakamoto" style="color:var(--btc)">GitHub</a></p>
+    </footer>
+  </div>
+</body>
+</html>
